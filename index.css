@@ -1,0 +1,101 @@
+:root {
+    --burgundy: #800020;
+    --light-gray: #D3D3D3;
+    --dark-text: #2c2c2c;
+    --white: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--white);
+    color: var(--dark-text);
+    scroll-behavior: smooth;
+}
+
+h1, h2, .logo {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: var(--burgundy);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Header */
+.header {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--light-gray);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--burgundy);
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--burgundy);
+}
+
+/* Sections */
+.section {
+    padding: 60px 10% ;
+}
+
+.bg-light { background-color: var(--light-gray); }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Game & Buttons */
+.btn {
+    background: var(--burgundy);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#game-target {
+    width: 100px;
+    height: 100px;
+    background: var(--burgundy);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 20px auto;
+    cursor: pointer;
+}
