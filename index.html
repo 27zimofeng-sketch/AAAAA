@@ -1,51 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio</title>
+    <title>Ada | Web Developer Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">DEV_NAME</div>
+        <div class="logo">ADA_DEV</div>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="#games">Games</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#projects">项目展示</a></li>
+            <li><a href="#resources">资源上传</a></li>
+            <li><a href="#games">小游戏</a></li>
         </ul>
     </nav>
 
     <header id="about" class="header">
         <div class="header-content">
-            <img src="your-picture.jpg" alt="Profile Picture" class="profile-pic">
-            <h1>I AM A <span class="highlight">WEB DEVELOPER</span></h1>
-            <p>I build high-performance web applications using pure HTML, CSS, and JavaScript.</p>
+            <div class="profile-container">
+                <img src="ada-photo.jpg" alt="Ada" class="profile-pic">
+            </div>
+            <h1>你好，我是 <span class="highlight">ADA</span></h1>
+            <p>专注于纯粹的 HTML, CSS, JavaScript 开发</p>
         </div>
     </header>
 
     <section id="projects" class="section">
-        <h2>Project Demonstration</h2>
-        <div id="project-list" class="grid">
-            </div>
+        <h2>项目演示 / Projects</h2>
+        <div id="project-list" class="grid"></div>
     </section>
 
-    <section id="resources" class="section bg-light">
-        <h2>Upload Resources</h2>
+    <section id="resources" class="section bg-soft-blue">
+        <h2>上传资源 / Resources</h2>
         <div class="upload-container">
             <input type="file" id="fileInput">
-            <button onclick="uploadFile()" class="btn">Upload</button>
+            <button onclick="uploadFile()" class="btn">点击上传</button>
             <ul id="fileList"></ul>
         </div>
     </section>
 
     <section id="games" class="section">
-        <h2>Mini Games</h2>
+        <h2>互动小游戏 / Mini Games</h2>
         <div class="game-area">
-            <p>Click the box as many times as you can!</p>
+            <p>挑战：点击下方的蓝色方块！</p>
             <div id="game-target" onclick="scorePoint()">0</div>
         </div>
     </section>
