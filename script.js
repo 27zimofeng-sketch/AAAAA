@@ -1,44 +1,44 @@
-// 1. Project Demonstration Data
+// 项目列表数据
 const projects = [
-    { title: "E-Commerce UI", desc: "Pure CSS layout with burgundy accents." },
-    { title: "JS Calculator", desc: "A functional math tool using vanilla JS." },
-    { title: "Task Manager", desc: "Local storage based productivity app." }
+    { title: "Ada's Dashboard", desc: "极简风格的管理后台界面" },
+    { title: "Weather App", desc: "基于 API 的实时天气展示" },
+    { title: "Vanilla Canvas", desc: "纯原生 JS 开发的画布交互" }
 ];
 
+// 动态渲染项目
 const projectList = document.getElementById('project-list');
-
-projects.forEach(proj => {
+projects.forEach(item => {
     const card = document.createElement('div');
-    card.style.border = "1px solid #D3D3D3";
-    card.style.padding = "15px";
-    card.innerHTML = `<h3>${proj.title}</h3><p>${proj.desc}</p>`;
+    card.className = 'card';
+    card.innerHTML = `<h3>${item.title}</h3><p>${item.desc}</p>`;
     projectList.appendChild(card);
 });
 
-// 2. Resource Upload Logic (Simulated)
+// 文件上传模拟
 function uploadFile() {
     const input = document.getElementById('fileInput');
     const list = document.getElementById('fileList');
     
     if (input.files.length > 0) {
         const li = document.createElement('li');
-        li.textContent = `Uploaded: ${input.files[0].name}`;
+        li.style.marginTop = "10px";
+        li.textContent = `✅ 成功收到文件: ${input.files[0].name}`;
         list.appendChild(li);
-        input.value = ""; // Clear input
+        input.value = ""; 
     } else {
-        alert("Please select a file first.");
+        alert("请先选择一个文件。");
     }
 }
 
-// 3. Mini Game Logic
-let score = 0;
+// 互动游戏：点击方块
+let count = 0;
 function scorePoint() {
-    score++;
+    count++;
     const target = document.getElementById('game-target');
-    target.textContent = score;
+    target.textContent = count;
     
-    // Move the box randomly
-    const x = Math.random() * 200 - 100;
-    const y = Math.random() * 200 - 100;
-    target.style.transform = `translate(${x}px, ${y}px)`;
+    // 随机移动位置
+    const randomX = (Math.random() - 0.5) * 300;
+    const randomY = (Math.random() - 0.5) * 300;
+    target.style.transform = `translate(${randomX}px, ${randomY}px)`;
 }
