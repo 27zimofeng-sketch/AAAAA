@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,41 +12,40 @@
     <nav class="navbar">
         <div class="logo">ADA_DEV</div>
         <ul class="nav-links">
-            <li><a href="#about">关于我</a></li>
-            <li><a href="#projects">项目展示</a></li>
-            <li><a href="#resources">资源上传</a></li>
-            <li><a href="#games">小游戏</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#games">Games</a></li>
         </ul>
     </nav>
 
     <header id="about" class="header">
         <div class="header-content">
-            <div class="profile-container">
-                <img src="ada-photo.jpg" alt="Ada" class="profile-pic">
-            </div>
-            <h1>你好，我是 <span class="highlight">ADA</span></h1>
-            <p>专注于纯粹的 HTML, CSS, JavaScript 开发</p>
+            <img src="ada-photo.jpg" alt="Ada" class="profile-pic">
+            <h1>I AM <span class="highlight">ADA</span></h1>
+            <p>Crafting high-performance web apps with Vanilla HTML, CSS, & JS.</p>
         </div>
     </header>
 
     <section id="projects" class="section">
-        <h2>项目演示 / Projects</h2>
-        <div id="project-list" class="grid"></div>
+        <h2>Project Demonstrations</h2>
+        <div id="project-list" class="grid">
+            </div>
     </section>
 
-    <section id="resources" class="section bg-soft-blue">
-        <h2>上传资源 / Resources</h2>
+    <section id="resources" class="section bg-light-blue">
+        <h2>Upload Resources</h2>
         <div class="upload-container">
             <input type="file" id="fileInput">
-            <button onclick="uploadFile()" class="btn">点击上传</button>
+            <button onclick="uploadFile()" class="btn">Upload File</button>
             <ul id="fileList"></ul>
         </div>
     </section>
 
     <section id="games" class="section">
-        <h2>互动小游戏 / Mini Games</h2>
+        <h2>Mini Games</h2>
         <div class="game-area">
-            <p>挑战：点击下方的蓝色方块！</p>
+            <p>Catch the blue square!</p>
             <div id="game-target" onclick="scorePoint()">0</div>
         </div>
     </section>
